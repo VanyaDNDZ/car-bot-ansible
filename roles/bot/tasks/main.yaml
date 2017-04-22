@@ -3,12 +3,12 @@
   local_action:
     module: github_key
     name: Access Key for Some Machine
-    token: {{ lookup('env','github_access_token') }}ß
+    token: "{{ lookup('env','github_access_token') }}"
 
 - git:
     repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
-    dest: '{{ lookup('env','WORKSPACE')  }}/bot'
+    dest: "{{ lookup('env','WORKSPACE')  }}/bot"
     version: development
 
 - name: Bot config creating
-  template: src=config.ini.template dest='{{ lookup('env','WORKSPACE')  }}/bot/config.ini'
+  template: src=config.ini.template dest="{{ lookup('env','WORKSPACE')  }}/bot/config.ini"
