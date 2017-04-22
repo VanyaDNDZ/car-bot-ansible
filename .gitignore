@@ -1,2 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
+.gitignore
+.idea/car-bot-ansible.iml
+.idea/deployment.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
