@@ -1,8 +1,9 @@
 ---
-- git:
-  repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
-  dest: "{{ lookup('env','WORKSPACE')  }}/bot"
-  version: development
+- name: Bot checkout
+  git:
+    repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
+    dest: "{{ lookup('env','WORKSPACE')  }}/bot"
+    version: development
 
 - name: Bot config creating
   template: src=config.ini.template dest="{{ lookup('env','WORKSPACE')  }}/bot/config.ini"
