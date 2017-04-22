@@ -1,6 +1,4 @@
 ---
-- vars:
-  bot_path: "{{ lookup('env','WORKSPACE')  }}/bot"
 
 - git:
   repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
