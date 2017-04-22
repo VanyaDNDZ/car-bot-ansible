@@ -1,7 +1,4 @@
 ---
 - hosts: localhost
-  vars:
-    bot_path: "{{ lookup('env','WORKSPACE')  }}/bot"
-
   roles:
     - bot
