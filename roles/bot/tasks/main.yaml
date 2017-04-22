@@ -1,5 +1,4 @@
 ---
-
 - git:
   repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
   dest: "{{ bot_path }}"
