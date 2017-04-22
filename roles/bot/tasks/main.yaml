@@ -1,8 +1,19 @@
 ---
+-vars:
+  bot_path: "{{ lookup('env','WORKSPACE')  }}/bot"
+
 - git:
-    repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
-    dest: "{{ lookup('env','WORKSPACE')  }}/bot"
-    version: development
+  repo: 'https://github.com/VanyaDNDZ/car-update-bot.git'
+  dest: "{{ bot_path }}"
+  version: development
 
 - name: Bot config creating
-  template: src=config.ini.template dest="{{ lookup('env','WORKSPACE')  }}/bot/config.ini"
+  template: src=config.ini.template dest="{{ bot_path }}/bot/config.ini"
+
+
+- name: Build bot-docker
+  docker_image:
+    path: "{{ bot_path }}"
+    name: localhost:5000/vanyadndz.carbot
+    tag: v1
+    push: yes
