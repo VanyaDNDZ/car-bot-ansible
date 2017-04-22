@@ -10,8 +10,6 @@
 
 
 - name: Build bot-docker
-  pip:
-    name: docker-py
   docker_image:
     path: "{{ lookup('env','WORKSPACE')  }}/bot"
     name: localhost:5000/vanyadndz.carbot
