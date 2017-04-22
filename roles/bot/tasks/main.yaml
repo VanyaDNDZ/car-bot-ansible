@@ -3,6 +3,7 @@
   local_action:
     module: github_key
     name: Access Key for Some Machine
+    state: absent
     token: "{{ lookup('env','github_access_token') }}"
 
 - git:
