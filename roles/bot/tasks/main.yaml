@@ -10,4 +10,8 @@
 
 
 - name: Build bot-docker
-  command: "docker build --tag localhost:5000/vanyadndz.carbot:v1 {{ lookup('env','WORKSPACE')  }}/bot"
+  docker_image:
+    path: "{{ lookup('env','WORKSPACE')  }}/bot"
+    name: localhost:5000/vanyadndz.carbot
+    tag: v1
+    push: yes
