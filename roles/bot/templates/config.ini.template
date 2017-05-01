@@ -2,7 +2,7 @@
 TOKEN = {{ lookup('env','BOTTOKEN') }}
 
 [DBCONFIG]
-DB_URL = postgresql+pg8000://{{DB_USER}}:{{DB_PASS}}@{{DB_URL}}:5432/{{DB_NAME}}
+DB_URL = postgresql+pg8000://{{ lookup('env','DB_USER') }}:{{ lookup('env','DB_PASS') }}@{{lookup('env','DB_URL') }}:5432/{{ lookup('env','DB_NAME') }}
 
 [SCRAPYHUB]
 TOKEN = {{ lookup('env','SCRAPYHUBTOKEN') }}
