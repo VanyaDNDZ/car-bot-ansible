@@ -2,7 +2,7 @@
 TOKEN = {{ lookup('env','BOTTOKEN') }}
 
 [DBCONFIG]
-DB_URL = sqlite+pysqlite:///showsdb.sqlite
+DB_URL = postgresql+pg8000://{{DB_USER}}:{{DB_PASS}}@{{DB_URL}}:5432/{{DB_NAME}}
 
 [SCRAPYHUB]
 TOKEN = {{ lookup('env','SCRAPYHUBTOKEN') }}
