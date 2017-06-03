@@ -13,5 +13,5 @@
   docker_image:
     path: "{{ lookup('env','WORKSPACE')  }}/bot"
     name: localhost:5000/vanyadndz.carbot
-    tag: v1
+    tag: v2
     push: yes
