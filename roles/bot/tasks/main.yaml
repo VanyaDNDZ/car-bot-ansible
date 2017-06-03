@@ -15,3 +15,4 @@
     name: localhost:5000/vanyadndz.carbot
     tag: v2
     push: yes
+    force: yes
